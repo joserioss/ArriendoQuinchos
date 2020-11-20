@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,17 +21,17 @@
                               <div class="col">
                                 <label for="estado_id">Estado</label>
                                 <select id = "estado_id" name = "estado_id" class="custom-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <c:forEach var="estado" items="${estados}">
+                                    	<option value="${estado.id}">${estado.descripcion}</option>
+                                    </c:forEach>
                                   </select>
                               </div>
                               <div class="col">
                                 <label for="departamento_id">Departamento</label>
                                 <select id = "departamento_id" name = "departamento_id" class="custom-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <c:forEach var="departamento" items="${departamentos}">
+                                    	<option value="${departamento.id}">${departamento.numero}</option>
+                                    </c:forEach>
                                   </select>
                               </div>
                               <div class="col">

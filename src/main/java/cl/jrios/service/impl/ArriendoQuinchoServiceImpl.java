@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import cl.jrios.model.ArriendoQuincho;
 import cl.jrios.repo.IArriendoQuinchoRepo;
 import cl.jrios.service.IArriendoQuinchoService;
 
+@Service
 public class ArriendoQuinchoServiceImpl implements IArriendoQuinchoService{
 	
 	@Autowired
