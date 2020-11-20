@@ -19,11 +19,11 @@
 			<div class="col">
 				<div class="row my-5">
 					<div class="col">
-						<form>
+						<form action="/" method="post">
 							<div class="form-row">
 								<div class="col">
 									<label for="estado_id">Estado</label> <select id="estado_id"
-										name="estado_id" class="custom-select">
+										name="estado_id" class="custom-select" required="required">
 										<c:forEach var="estado" items="${estados}">
 											<option value="${estado.id}">${estado.descripcion}</option>
 										</c:forEach>
@@ -32,7 +32,7 @@
 								<div class="col">
 									<label for="departamento_id">Departamento</label> <select
 										id="departamento_id" name="departamento_id"
-										class="custom-select">
+										class="custom-select" required="required">
 										<c:forEach var="departamento" items="${departamentos}">
 											<option value="${departamento.id}">${departamento.numero}</option>
 										</c:forEach>
@@ -41,25 +41,27 @@
 								<div class="col">
 									<label for="fecha_desde">Fecha desde</label> <input
 										id="fecha_desde" name="fecha_desde" type="date"
-										class="form-control" placeholder="Last name">
+										class="form-control" placeholder="Last name"
+										required="required">
 								</div>
 								<div class="col">
 									<label for="fecha_hasta">Fecha hasta</label> <input
 										id="fecha_hasta" name="fecha_hasta" type="date"
-										class="form-control" placeholder="Last name">
+										class="form-control" placeholder="Last name"
+										required="required">
 								</div>
 							</div>
 							<div class="row my-3">
 								<div class="col">
-									<button type="button" class="btn btn-secondary">Buscar</button>
+									<button type="submit" class="btn btn-secondary">Buscar</button>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
-				<div class="row">	
+				<div class="row">
 					<div class="col">
-					<h3>Tabla de arriendos: </h3>
+						<h3>Tabla de arriendos:</h3>
 						<table class="table">
 							<thead>
 								<tr>
