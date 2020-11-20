@@ -23,7 +23,7 @@ public class ArriendoQuincho {
 
 	@ManyToOne
 	@JoinColumn(name = "departamento_id", nullable = false, foreignKey = @ForeignKey(name = "arriendoquincho_departamento_FK"))
-	private Departamento departament;
+	private Departamento departamento;
 
 	@ManyToOne
 	@JoinColumn(name = "estado_id", nullable = false, foreignKey = @ForeignKey(name = "arriendoquincho_estado_FK"))
@@ -45,12 +45,12 @@ public class ArriendoQuincho {
 		this.fecha = fecha;
 	}
 
-	public Departamento getDepartament() {
-		return departament;
+	public Departamento getDepartamento() {
+		return departamento;
 	}
 
-	public void setDepartament(Departamento departament) {
-		this.departament = departament;
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
 	}
 
 	public Estado getEstado() {
